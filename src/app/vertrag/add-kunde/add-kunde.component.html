@@ -1,0 +1,72 @@
+<div class="container">
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" [(ngModel)]="kunde.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label>Vorname:</label>
+      <input type="text" class="form-control" [(ngModel)]="kunde.vorname" name="vorname">
+    </div>
+
+    <div class="form-group">
+      <label>VersicherungNr:</label>
+      <input type="text" class="form-control" [(ngModel)]="kunde.versicherungsNr" name="versicherungNr">
+    </div>
+
+    <div class="form-group">
+      <label>Straße:</label>
+      <input type="text" class="form-control" [(ngModel)]="anschrift.strasse" name="strasse">
+    </div>
+
+    <div class="form-group">
+      <label>HausNr:</label>
+      <input type="text" class="form-control" [(ngModel)]="anschrift.hausNr" name="hausNr">
+    </div>
+
+    <div class="form-group">
+      <label>Land:</label>
+      <input type="text" class="form-control" [(ngModel)]="anschrift.land" name="land">
+    </div>
+
+    <div class="form-group">
+      <label>Ort:</label>
+      <input type="text" class="form-control" [(ngModel)]="anschrift.ort" name="ort">
+    </div>
+
+    <div class="form-group">
+      <label>plz:</label>
+      <input type="text" class="form-control" [(ngModel)]="anschrift.plz" name="plz">
+    </div>
+
+    <div class="form-group">
+      <label>Institut:</label>
+      <input type="text" class="form-control" [(ngModel)]="bankverbindung.institut" name="institut">
+    </div>
+
+    <div class="form-group">
+      <label>KontoNr:</label>
+      <input type="text" class="form-control" [(ngModel)]="bankverbindung.kontoNr" name="kontoNr">
+    </div>
+
+    <div class="form-group">
+      <label>BIC:</label>
+      <input type="text" class="form-control" [(ngModel)]="bankverbindung.bic" name="bic">
+    </div>
+
+    <div class="form-group">
+      <label>blz:</label>
+      <input type="text" class="form-control" [(ngModel)]="bankverbindung.blz" name="blz">
+    </div>
+
+    <div class="form-group">
+      <label>Iban:</label>
+      <input type="text" class="form-control" [(ngModel)]="bankverbindung.iban" name="iban">
+    </div>
+
+    <button class="btn btn-success">Submit</button>
+  </form>
+
+</div>

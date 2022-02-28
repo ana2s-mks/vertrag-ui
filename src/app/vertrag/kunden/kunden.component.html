@@ -1,0 +1,19 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Vorname</th>
+    <th>VersicherungsNr</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let kunde of vertraege">
+    <td>{{kunde.name}}</td>
+    <td>{{kunde.vorname}}</td>
+    <td>{{kunde.versicherungsNr}}</td>
+    <td>
+      <button (click)="kundeDetail(kunde.id)">Mehr Details</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

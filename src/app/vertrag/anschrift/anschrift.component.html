@@ -1,0 +1,20 @@
+<div class="container">
+  <app-shared-nav></app-shared-nav>
+
+  <div class="input-group">
+    <span class="input-group-text">Starße:</span>
+    <input type="text" class="form-control" [(ngModel)]="anschrift.strasse" (ngModelChange)="valueChange($event)">
+    <span class="input-group-text">hausNr:</span>
+    <input type="text" class="form-control" [(ngModel)]="anschrift.hausNr">
+  </div>
+
+  <div class="input-group">
+    <span class="input-group-text">plz:</span>
+    <input type="text" class="form-control" [(ngModel)]="anschrift.plz">
+    <span class="input-group-text">Ort:</span>
+    <input type="text" class="form-control" [(ngModel)]="anschrift.ort">
+  </div>
+
+  <button class="btn btn-primary" (click)="onSubmit()">Speichern</button>
+
+</div>

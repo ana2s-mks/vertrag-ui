@@ -1,17 +1,17 @@
 import {Component, OnInit} from '@angular/core';
-import {VertragService} from "./service/vertrag.service";
 import {Router} from '@angular/router';
+import {VertragService} from "../../service/vertrag.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  selector: 'app-kunden',
+  templateUrl: './kunden.component.html',
+  styleUrls: ['./kunden.component.sass']
 })
-export class AppComponent implements OnInit {
-  title = 'vertrag-ui';
+export class KundenComponent implements OnInit {
 
   vertraege: Array<any>;
 
+  //selectKundeVertrag$: Observable<Kunde[] | undefined> = this.store$.pipe(select(selectGetKunde));
 
 
   constructor(private vertragService: VertragService, private router: Router) {
@@ -19,12 +19,14 @@ export class AppComponent implements OnInit {
 
   kundeDetail(id: number) {
     this.router.navigate(["kunden/" + id]);
-    //this.vertragService.getKundeById(id);
   }
+
+
 
   ngOnInit(): void {
     this.vertragService.getAllKunde().subscribe(value => {
       this.vertraege = value
     })
+
   }
 }
