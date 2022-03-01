@@ -1,0 +1,12 @@
+version: '2.2'
+
+services:
+  angular-service:
+    container_name: ui-app
+    build: ./
+    volumes:
+    - './vertrag-ui:/usr/src/app'
+    ports:
+    - '4200:4200'
+    command: >
+      bash -c "npm start"
